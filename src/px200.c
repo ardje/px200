@@ -30,7 +30,8 @@
 #include <linux/miscdevice.h>
 #include <linux/serial_core.h>
 #include <linux/serial_reg.h>
-#include "8250.h"
+#include <linux/serial_8250.h>
+//#include "8250.h"
 
 /* PCI ID */
 #define PCI_VENDOR_ID_E2C		0x1836
