@@ -1,0 +1,11 @@
+Note:
+For the module to correctly load, you must make sure that the number of runtime uarts are high enough configured.
+You can do this in the kernel by setting:
+CONFIG_SERIAL_8250_RUNTIME_UARTS or: 8250.nr_uarts as a boot time parameter
+to a value at least 5 higher than the usual 4 that are reserved for the base system.
+This number must be lower than:
+CONFIG_SERIAL_8250_NR_UARTS
+
+The defaults for these are 32 and 4, distribution kernels usually set it much higher.
+(ubuntu uses 48/32)
+
